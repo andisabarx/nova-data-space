@@ -40,7 +40,7 @@ export function Navbar() {
 
         <ul className="hidden items-center gap-8 font-ui text-sm font-medium text-subtle lg:flex">
           {links.map((l) => (
-            <li key={l.href}>
+            <li key={l.label}>
               <a
                 href={l.href}
                 className="transition-colors hover:text-primary"
@@ -85,7 +85,7 @@ export function Navbar() {
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <ul className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4 font-ui text-sm">
             {[...links, { label: "Contact Me", href: "#contact" }].map((l) => (
-              <li key={l.href}>
+              <li key={l.label}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
