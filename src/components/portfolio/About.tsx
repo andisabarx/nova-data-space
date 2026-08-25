@@ -1,4 +1,5 @@
 import { Download } from "lucide-react";
+import { toast } from "sonner";
 import { Reveal, SectionHeading } from "./Reveal";
 
 export function About() {
@@ -31,13 +32,14 @@ export function About() {
               an AI idea that needs a pragmatic first version — let's build it
               together.
             </p>
-            <a
-              href="#resume"
+            <button
+              type="button"
+              onClick={() => toast.success("Resume", { description: "The PDF download will be available soon." })}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground px-8 py-3 font-ui text-sm font-bold text-background transition-opacity hover:opacity-90"
             >
               <Download className="h-4 w-4" />
               Download Resume
-            </a>
+            </button>
           </Reveal>
         </div>
       </div>
